@@ -7,6 +7,7 @@ package org.jellyfin.sdk.api.operations
 
 import kotlin.Any
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -41,19 +42,15 @@ public class UserApi(
 	 *
 	 * @param userId The user id.
 	 * @param pw The password as plain text.
-	 * @param password The password sha1-hash.
 	 */
-	public suspend fun authenticateUser(
-		userId: UUID = api.userId ?: throw MissingUserIdException(),
-		pw: String,
-		password: String? = null,
-	): Response<AuthenticationResult> {
+	@Deprecated("This member is deprecated and may be removed in the future")
+	public suspend fun authenticateUser(userId: UUID = api.userId ?: throw MissingUserIdException(),
+			pw: String): Response<AuthenticationResult> {
 		val pathParameters = buildMap<String, Any?>(1) {
 			put("userId", userId)
 		}
-		val queryParameters = buildMap<String, Any?>(2) {
+		val queryParameters = buildMap<String, Any?>(1) {
 			put("pw", pw)
-			put("password", password)
 		}
 		val data = null
 		val response = api.post<AuthenticationResult>("/Users/{userId}/Authenticate", pathParameters,
@@ -225,6 +222,7 @@ public class UserApi(
 	 *
 	 * @param userId The user id.
 	 */
+	@Deprecated("This member is deprecated and may be removed in the future")
 	public suspend fun updateUserEasyPassword(userId: UUID = api.userId ?: throw
 			MissingUserIdException(), `data`: UpdateUserEasyPassword): Response<Unit> {
 		val pathParameters = buildMap<String, Any?>(1) {

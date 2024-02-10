@@ -189,7 +189,6 @@ public class ImageApi(
 	 * cases.
 	 * @param fillWidth Width of box to fill.
 	 * @param fillHeight Height of box to fill.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -209,7 +208,6 @@ public class ImageApi(
 		quality: Int? = null,
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -219,7 +217,7 @@ public class ImageApi(
 			put("imageType", imageType)
 			put("imageIndex", imageIndex)
 		}
-		val queryParameters = buildMap<String, Any?>(15) {
+		val queryParameters = buildMap<String, Any?>(14) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -231,7 +229,6 @@ public class ImageApi(
 			put("quality", quality)
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -263,7 +260,6 @@ public class ImageApi(
 		quality = request.quality,
 		fillWidth = request.fillWidth,
 		fillHeight = request.fillHeight,
-		addPlayedIndicator = request.addPlayedIndicator,
 		blur = request.blur,
 		backgroundColor = request.backgroundColor,
 		foregroundLayer = request.foregroundLayer,
@@ -288,7 +284,6 @@ public class ImageApi(
 	 * cases.
 	 * @param fillWidth Width of box to fill.
 	 * @param fillHeight Height of box to fill.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -308,7 +303,6 @@ public class ImageApi(
 		quality: Int? = null,
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -318,7 +312,7 @@ public class ImageApi(
 			put("imageType", imageType)
 			put("imageIndex", imageIndex)
 		}
-		val queryParameters = buildMap<String, Any?>(15) {
+		val queryParameters = buildMap<String, Any?>(14) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -330,7 +324,6 @@ public class ImageApi(
 			put("quality", quality)
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -360,7 +353,6 @@ public class ImageApi(
 	 * @param fillHeight Height of box to fill.
 	 * @param cropWhitespace Optional. Specify if whitespace should be cropped out of the image.
 	 * True/False. If unspecified, whitespace will be cropped from logos and clear art.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -382,7 +374,6 @@ public class ImageApi(
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
 		cropWhitespace: Boolean? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -392,7 +383,7 @@ public class ImageApi(
 			put("imageType", imageType)
 			put("imageIndex", imageIndex)
 		}
-		val queryParameters = buildMap<String, Any?>(16) {
+		val queryParameters = buildMap<String, Any?>(15) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -405,7 +396,6 @@ public class ImageApi(
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
 			put("cropWhitespace", cropWhitespace)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -439,7 +429,6 @@ public class ImageApi(
 		fillWidth = request.fillWidth,
 		fillHeight = request.fillHeight,
 		cropWhitespace = request.cropWhitespace,
-		addPlayedIndicator = request.addPlayedIndicator,
 		blur = request.blur,
 		backgroundColor = request.backgroundColor,
 		foregroundLayer = request.foregroundLayer,
@@ -466,7 +455,6 @@ public class ImageApi(
 	 * @param fillHeight Height of box to fill.
 	 * @param cropWhitespace Optional. Specify if whitespace should be cropped out of the image.
 	 * True/False. If unspecified, whitespace will be cropped from logos and clear art.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -488,7 +476,6 @@ public class ImageApi(
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
 		cropWhitespace: Boolean? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -498,7 +485,7 @@ public class ImageApi(
 			put("imageType", imageType)
 			put("imageIndex", imageIndex)
 		}
-		val queryParameters = buildMap<String, Any?>(16) {
+		val queryParameters = buildMap<String, Any?>(15) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -511,7 +498,6 @@ public class ImageApi(
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
 			put("cropWhitespace", cropWhitespace)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -538,7 +524,6 @@ public class ImageApi(
 	 * cases.
 	 * @param fillWidth Width of box to fill.
 	 * @param fillHeight Height of box to fill.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -558,7 +543,6 @@ public class ImageApi(
 		quality: Int? = null,
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -568,7 +552,7 @@ public class ImageApi(
 			put("name", name)
 			put("imageType", imageType)
 		}
-		val queryParameters = buildMap<String, Any?>(16) {
+		val queryParameters = buildMap<String, Any?>(15) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -580,7 +564,6 @@ public class ImageApi(
 			put("quality", quality)
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -612,7 +595,6 @@ public class ImageApi(
 		quality = request.quality,
 		fillWidth = request.fillWidth,
 		fillHeight = request.fillHeight,
-		addPlayedIndicator = request.addPlayedIndicator,
 		blur = request.blur,
 		backgroundColor = request.backgroundColor,
 		foregroundLayer = request.foregroundLayer,
@@ -637,7 +619,6 @@ public class ImageApi(
 	 * cases.
 	 * @param fillWidth Width of box to fill.
 	 * @param fillHeight Height of box to fill.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -657,7 +638,6 @@ public class ImageApi(
 		quality: Int? = null,
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -667,7 +647,7 @@ public class ImageApi(
 			put("name", name)
 			put("imageType", imageType)
 		}
-		val queryParameters = buildMap<String, Any?>(16) {
+		val queryParameters = buildMap<String, Any?>(15) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -679,7 +659,6 @@ public class ImageApi(
 			put("quality", quality)
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -707,7 +686,6 @@ public class ImageApi(
 	 * cases.
 	 * @param fillWidth Width of box to fill.
 	 * @param fillHeight Height of box to fill.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -727,7 +705,6 @@ public class ImageApi(
 		quality: Int? = null,
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -737,7 +714,7 @@ public class ImageApi(
 			put("imageType", imageType)
 			put("imageIndex", imageIndex)
 		}
-		val queryParameters = buildMap<String, Any?>(15) {
+		val queryParameters = buildMap<String, Any?>(14) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -749,7 +726,6 @@ public class ImageApi(
 			put("quality", quality)
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -781,7 +757,6 @@ public class ImageApi(
 		quality = request.quality,
 		fillWidth = request.fillWidth,
 		fillHeight = request.fillHeight,
-		addPlayedIndicator = request.addPlayedIndicator,
 		blur = request.blur,
 		backgroundColor = request.backgroundColor,
 		foregroundLayer = request.foregroundLayer,
@@ -806,7 +781,6 @@ public class ImageApi(
 	 * cases.
 	 * @param fillWidth Width of box to fill.
 	 * @param fillHeight Height of box to fill.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -826,7 +800,6 @@ public class ImageApi(
 		quality: Int? = null,
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -836,7 +809,7 @@ public class ImageApi(
 			put("imageType", imageType)
 			put("imageIndex", imageIndex)
 		}
-		val queryParameters = buildMap<String, Any?>(15) {
+		val queryParameters = buildMap<String, Any?>(14) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -848,7 +821,6 @@ public class ImageApi(
 			put("quality", quality)
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -878,7 +850,6 @@ public class ImageApi(
 	 * @param fillHeight Height of box to fill.
 	 * @param cropWhitespace Optional. Specify if whitespace should be cropped out of the image.
 	 * True/False. If unspecified, whitespace will be cropped from logos and clear art.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -900,7 +871,6 @@ public class ImageApi(
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
 		cropWhitespace: Boolean? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -910,7 +880,7 @@ public class ImageApi(
 			put("imageType", imageType)
 			put("imageIndex", imageIndex)
 		}
-		val queryParameters = buildMap<String, Any?>(16) {
+		val queryParameters = buildMap<String, Any?>(15) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -923,7 +893,6 @@ public class ImageApi(
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
 			put("cropWhitespace", cropWhitespace)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -957,7 +926,6 @@ public class ImageApi(
 		fillWidth = request.fillWidth,
 		fillHeight = request.fillHeight,
 		cropWhitespace = request.cropWhitespace,
-		addPlayedIndicator = request.addPlayedIndicator,
 		blur = request.blur,
 		backgroundColor = request.backgroundColor,
 		foregroundLayer = request.foregroundLayer,
@@ -984,7 +952,6 @@ public class ImageApi(
 	 * @param fillHeight Height of box to fill.
 	 * @param cropWhitespace Optional. Specify if whitespace should be cropped out of the image.
 	 * True/False. If unspecified, whitespace will be cropped from logos and clear art.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -1006,7 +973,6 @@ public class ImageApi(
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
 		cropWhitespace: Boolean? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -1016,7 +982,7 @@ public class ImageApi(
 			put("imageType", imageType)
 			put("imageIndex", imageIndex)
 		}
-		val queryParameters = buildMap<String, Any?>(16) {
+		val queryParameters = buildMap<String, Any?>(15) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -1029,7 +995,6 @@ public class ImageApi(
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
 			put("cropWhitespace", cropWhitespace)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -1058,7 +1023,6 @@ public class ImageApi(
 	 * @param fillHeight Height of box to fill.
 	 * @param cropWhitespace Optional. Specify if whitespace should be cropped out of the image.
 	 * True/False. If unspecified, whitespace will be cropped from logos and clear art.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -1080,7 +1044,6 @@ public class ImageApi(
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
 		cropWhitespace: Boolean? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -1090,7 +1053,7 @@ public class ImageApi(
 			put("name", name)
 			put("imageType", imageType)
 		}
-		val queryParameters = buildMap<String, Any?>(17) {
+		val queryParameters = buildMap<String, Any?>(16) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -1103,7 +1066,6 @@ public class ImageApi(
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
 			put("cropWhitespace", cropWhitespace)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -1137,7 +1099,6 @@ public class ImageApi(
 		fillWidth = request.fillWidth,
 		fillHeight = request.fillHeight,
 		cropWhitespace = request.cropWhitespace,
-		addPlayedIndicator = request.addPlayedIndicator,
 		blur = request.blur,
 		backgroundColor = request.backgroundColor,
 		foregroundLayer = request.foregroundLayer,
@@ -1164,7 +1125,6 @@ public class ImageApi(
 	 * @param fillHeight Height of box to fill.
 	 * @param cropWhitespace Optional. Specify if whitespace should be cropped out of the image.
 	 * True/False. If unspecified, whitespace will be cropped from logos and clear art.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -1186,7 +1146,6 @@ public class ImageApi(
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
 		cropWhitespace: Boolean? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -1196,7 +1155,7 @@ public class ImageApi(
 			put("name", name)
 			put("imageType", imageType)
 		}
-		val queryParameters = buildMap<String, Any?>(17) {
+		val queryParameters = buildMap<String, Any?>(16) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -1209,7 +1168,6 @@ public class ImageApi(
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
 			put("cropWhitespace", cropWhitespace)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -1234,7 +1192,6 @@ public class ImageApi(
 	 * @param tag Optional. Supply the cache tag from the item object to receive strong caching
 	 * headers.
 	 * @param format Optional. The MediaBrowser.Model.Drawing.ImageFormat of the returned image.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param percentPlayed Optional. Percent to render for the percent played overlay.
 	 * @param unplayedCount Optional. Unplayed count overlay to render.
 	 * @param blur Optional. Blur image.
@@ -1254,7 +1211,6 @@ public class ImageApi(
 		fillHeight: Int? = null,
 		tag: String? = null,
 		format: ImageFormat? = null,
-		addPlayedIndicator: Boolean? = null,
 		percentPlayed: Double? = null,
 		unplayedCount: Int? = null,
 		blur: Int? = null,
@@ -1266,7 +1222,7 @@ public class ImageApi(
 			put("itemId", itemId)
 			put("imageType", imageType)
 		}
-		val queryParameters = buildMap<String, Any?>(16) {
+		val queryParameters = buildMap<String, Any?>(15) {
 			put("maxWidth", maxWidth)
 			put("maxHeight", maxHeight)
 			put("width", width)
@@ -1276,7 +1232,6 @@ public class ImageApi(
 			put("fillHeight", fillHeight)
 			put("tag", tag)
 			put("format", format)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("percentPlayed", percentPlayed)
 			put("unplayedCount", unplayedCount)
 			put("blur", blur)
@@ -1308,7 +1263,6 @@ public class ImageApi(
 		fillHeight = request.fillHeight,
 		tag = request.tag,
 		format = request.format,
-		addPlayedIndicator = request.addPlayedIndicator,
 		percentPlayed = request.percentPlayed,
 		unplayedCount = request.unplayedCount,
 		blur = request.blur,
@@ -1333,7 +1287,6 @@ public class ImageApi(
 	 * @param tag Optional. Supply the cache tag from the item object to receive strong caching
 	 * headers.
 	 * @param format Optional. The MediaBrowser.Model.Drawing.ImageFormat of the returned image.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param percentPlayed Optional. Percent to render for the percent played overlay.
 	 * @param unplayedCount Optional. Unplayed count overlay to render.
 	 * @param blur Optional. Blur image.
@@ -1353,7 +1306,6 @@ public class ImageApi(
 		fillHeight: Int? = null,
 		tag: String? = null,
 		format: ImageFormat? = null,
-		addPlayedIndicator: Boolean? = null,
 		percentPlayed: Double? = null,
 		unplayedCount: Int? = null,
 		blur: Int? = null,
@@ -1365,7 +1317,7 @@ public class ImageApi(
 			put("itemId", itemId)
 			put("imageType", imageType)
 		}
-		val queryParameters = buildMap<String, Any?>(16) {
+		val queryParameters = buildMap<String, Any?>(15) {
 			put("maxWidth", maxWidth)
 			put("maxHeight", maxHeight)
 			put("width", width)
@@ -1375,7 +1327,6 @@ public class ImageApi(
 			put("fillHeight", fillHeight)
 			put("tag", tag)
 			put("format", format)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("percentPlayed", percentPlayed)
 			put("unplayedCount", unplayedCount)
 			put("blur", blur)
@@ -1405,7 +1356,6 @@ public class ImageApi(
 	 * cases.
 	 * @param fillWidth Width of box to fill.
 	 * @param fillHeight Height of box to fill.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -1425,7 +1375,6 @@ public class ImageApi(
 		quality: Int? = null,
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -1441,13 +1390,12 @@ public class ImageApi(
 			put("unplayedCount", unplayedCount)
 			put("imageIndex", imageIndex)
 		}
-		val queryParameters = buildMap<String, Any?>(9) {
+		val queryParameters = buildMap<String, Any?>(8) {
 			put("width", width)
 			put("height", height)
 			put("quality", quality)
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -1480,7 +1428,6 @@ public class ImageApi(
 		quality = request.quality,
 		fillWidth = request.fillWidth,
 		fillHeight = request.fillHeight,
-		addPlayedIndicator = request.addPlayedIndicator,
 		blur = request.blur,
 		backgroundColor = request.backgroundColor,
 		foregroundLayer = request.foregroundLayer,
@@ -1505,7 +1452,6 @@ public class ImageApi(
 	 * cases.
 	 * @param fillWidth Width of box to fill.
 	 * @param fillHeight Height of box to fill.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -1525,7 +1471,6 @@ public class ImageApi(
 		quality: Int? = null,
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -1541,13 +1486,12 @@ public class ImageApi(
 			put("unplayedCount", unplayedCount)
 			put("imageIndex", imageIndex)
 		}
-		val queryParameters = buildMap<String, Any?>(9) {
+		val queryParameters = buildMap<String, Any?>(8) {
 			put("width", width)
 			put("height", height)
 			put("quality", quality)
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -1577,7 +1521,6 @@ public class ImageApi(
 	 * @param fillHeight Height of box to fill.
 	 * @param cropWhitespace Optional. Specify if whitespace should be cropped out of the image.
 	 * True/False. If unspecified, whitespace will be cropped from logos and clear art.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -1599,7 +1542,6 @@ public class ImageApi(
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
 		cropWhitespace: Boolean? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -1615,14 +1557,13 @@ public class ImageApi(
 			put("unplayedCount", unplayedCount)
 			put("imageIndex", imageIndex)
 		}
-		val queryParameters = buildMap<String, Any?>(10) {
+		val queryParameters = buildMap<String, Any?>(9) {
 			put("width", width)
 			put("height", height)
 			put("quality", quality)
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
 			put("cropWhitespace", cropWhitespace)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -1657,7 +1598,6 @@ public class ImageApi(
 		fillWidth = request.fillWidth,
 		fillHeight = request.fillHeight,
 		cropWhitespace = request.cropWhitespace,
-		addPlayedIndicator = request.addPlayedIndicator,
 		blur = request.blur,
 		backgroundColor = request.backgroundColor,
 		foregroundLayer = request.foregroundLayer,
@@ -1684,7 +1624,6 @@ public class ImageApi(
 	 * @param fillHeight Height of box to fill.
 	 * @param cropWhitespace Optional. Specify if whitespace should be cropped out of the image.
 	 * True/False. If unspecified, whitespace will be cropped from logos and clear art.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -1706,7 +1645,6 @@ public class ImageApi(
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
 		cropWhitespace: Boolean? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -1722,14 +1660,13 @@ public class ImageApi(
 			put("unplayedCount", unplayedCount)
 			put("imageIndex", imageIndex)
 		}
-		val queryParameters = buildMap<String, Any?>(10) {
+		val queryParameters = buildMap<String, Any?>(9) {
 			put("width", width)
 			put("height", height)
 			put("quality", quality)
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
 			put("cropWhitespace", cropWhitespace)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -1755,7 +1692,6 @@ public class ImageApi(
 	 * @param tag Optional. Supply the cache tag from the item object to receive strong caching
 	 * headers.
 	 * @param format Optional. The MediaBrowser.Model.Drawing.ImageFormat of the returned image.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param percentPlayed Optional. Percent to render for the percent played overlay.
 	 * @param unplayedCount Optional. Unplayed count overlay to render.
 	 * @param blur Optional. Blur image.
@@ -1775,7 +1711,6 @@ public class ImageApi(
 		fillHeight: Int? = null,
 		tag: String? = null,
 		format: ImageFormat? = null,
-		addPlayedIndicator: Boolean? = null,
 		percentPlayed: Double? = null,
 		unplayedCount: Int? = null,
 		blur: Int? = null,
@@ -1787,7 +1722,7 @@ public class ImageApi(
 			put("imageType", imageType)
 			put("imageIndex", imageIndex)
 		}
-		val queryParameters = buildMap<String, Any?>(15) {
+		val queryParameters = buildMap<String, Any?>(14) {
 			put("maxWidth", maxWidth)
 			put("maxHeight", maxHeight)
 			put("width", width)
@@ -1797,7 +1732,6 @@ public class ImageApi(
 			put("fillHeight", fillHeight)
 			put("tag", tag)
 			put("format", format)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("percentPlayed", percentPlayed)
 			put("unplayedCount", unplayedCount)
 			put("blur", blur)
@@ -1829,7 +1763,6 @@ public class ImageApi(
 		fillHeight = request.fillHeight,
 		tag = request.tag,
 		format = request.format,
-		addPlayedIndicator = request.addPlayedIndicator,
 		percentPlayed = request.percentPlayed,
 		unplayedCount = request.unplayedCount,
 		blur = request.blur,
@@ -1854,7 +1787,6 @@ public class ImageApi(
 	 * @param tag Optional. Supply the cache tag from the item object to receive strong caching
 	 * headers.
 	 * @param format Optional. The MediaBrowser.Model.Drawing.ImageFormat of the returned image.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param percentPlayed Optional. Percent to render for the percent played overlay.
 	 * @param unplayedCount Optional. Unplayed count overlay to render.
 	 * @param blur Optional. Blur image.
@@ -1874,7 +1806,6 @@ public class ImageApi(
 		fillHeight: Int? = null,
 		tag: String? = null,
 		format: ImageFormat? = null,
-		addPlayedIndicator: Boolean? = null,
 		percentPlayed: Double? = null,
 		unplayedCount: Int? = null,
 		blur: Int? = null,
@@ -1886,7 +1817,7 @@ public class ImageApi(
 			put("imageType", imageType)
 			put("imageIndex", imageIndex)
 		}
-		val queryParameters = buildMap<String, Any?>(15) {
+		val queryParameters = buildMap<String, Any?>(14) {
 			put("maxWidth", maxWidth)
 			put("maxHeight", maxHeight)
 			put("width", width)
@@ -1896,7 +1827,6 @@ public class ImageApi(
 			put("fillHeight", fillHeight)
 			put("tag", tag)
 			put("format", format)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("percentPlayed", percentPlayed)
 			put("unplayedCount", unplayedCount)
 			put("blur", blur)
@@ -1926,7 +1856,6 @@ public class ImageApi(
 	 * @param cropWhitespace Optional. Specify if whitespace should be cropped out of the image.
 	 * True/False. If unspecified, whitespace will be cropped from logos and clear art.
 	 * @param format Optional. The MediaBrowser.Model.Drawing.ImageFormat of the returned image.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param percentPlayed Optional. Percent to render for the percent played overlay.
 	 * @param unplayedCount Optional. Unplayed count overlay to render.
 	 * @param blur Optional. Blur image.
@@ -1948,7 +1877,6 @@ public class ImageApi(
 		tag: String? = null,
 		cropWhitespace: Boolean? = null,
 		format: ImageFormat? = null,
-		addPlayedIndicator: Boolean? = null,
 		percentPlayed: Double? = null,
 		unplayedCount: Int? = null,
 		blur: Int? = null,
@@ -1960,7 +1888,7 @@ public class ImageApi(
 			put("imageType", imageType)
 			put("imageIndex", imageIndex)
 		}
-		val queryParameters = buildMap<String, Any?>(16) {
+		val queryParameters = buildMap<String, Any?>(15) {
 			put("maxWidth", maxWidth)
 			put("maxHeight", maxHeight)
 			put("width", width)
@@ -1971,7 +1899,6 @@ public class ImageApi(
 			put("tag", tag)
 			put("cropWhitespace", cropWhitespace)
 			put("format", format)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("percentPlayed", percentPlayed)
 			put("unplayedCount", unplayedCount)
 			put("blur", blur)
@@ -2005,7 +1932,6 @@ public class ImageApi(
 		tag = request.tag,
 		cropWhitespace = request.cropWhitespace,
 		format = request.format,
-		addPlayedIndicator = request.addPlayedIndicator,
 		percentPlayed = request.percentPlayed,
 		unplayedCount = request.unplayedCount,
 		blur = request.blur,
@@ -2032,7 +1958,6 @@ public class ImageApi(
 	 * @param cropWhitespace Optional. Specify if whitespace should be cropped out of the image.
 	 * True/False. If unspecified, whitespace will be cropped from logos and clear art.
 	 * @param format Optional. The MediaBrowser.Model.Drawing.ImageFormat of the returned image.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param percentPlayed Optional. Percent to render for the percent played overlay.
 	 * @param unplayedCount Optional. Unplayed count overlay to render.
 	 * @param blur Optional. Blur image.
@@ -2054,7 +1979,6 @@ public class ImageApi(
 		tag: String? = null,
 		cropWhitespace: Boolean? = null,
 		format: ImageFormat? = null,
-		addPlayedIndicator: Boolean? = null,
 		percentPlayed: Double? = null,
 		unplayedCount: Int? = null,
 		blur: Int? = null,
@@ -2066,7 +1990,7 @@ public class ImageApi(
 			put("imageType", imageType)
 			put("imageIndex", imageIndex)
 		}
-		val queryParameters = buildMap<String, Any?>(16) {
+		val queryParameters = buildMap<String, Any?>(15) {
 			put("maxWidth", maxWidth)
 			put("maxHeight", maxHeight)
 			put("width", width)
@@ -2077,7 +2001,6 @@ public class ImageApi(
 			put("tag", tag)
 			put("cropWhitespace", cropWhitespace)
 			put("format", format)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("percentPlayed", percentPlayed)
 			put("unplayedCount", unplayedCount)
 			put("blur", blur)
@@ -2106,7 +2029,6 @@ public class ImageApi(
 	 * @param cropWhitespace Optional. Specify if whitespace should be cropped out of the image.
 	 * True/False. If unspecified, whitespace will be cropped from logos and clear art.
 	 * @param format Optional. The MediaBrowser.Model.Drawing.ImageFormat of the returned image.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param percentPlayed Optional. Percent to render for the percent played overlay.
 	 * @param unplayedCount Optional. Unplayed count overlay to render.
 	 * @param blur Optional. Blur image.
@@ -2128,7 +2050,6 @@ public class ImageApi(
 		tag: String? = null,
 		cropWhitespace: Boolean? = null,
 		format: ImageFormat? = null,
-		addPlayedIndicator: Boolean? = null,
 		percentPlayed: Double? = null,
 		unplayedCount: Int? = null,
 		blur: Int? = null,
@@ -2140,7 +2061,7 @@ public class ImageApi(
 			put("itemId", itemId)
 			put("imageType", imageType)
 		}
-		val queryParameters = buildMap<String, Any?>(17) {
+		val queryParameters = buildMap<String, Any?>(16) {
 			put("maxWidth", maxWidth)
 			put("maxHeight", maxHeight)
 			put("width", width)
@@ -2151,7 +2072,6 @@ public class ImageApi(
 			put("tag", tag)
 			put("cropWhitespace", cropWhitespace)
 			put("format", format)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("percentPlayed", percentPlayed)
 			put("unplayedCount", unplayedCount)
 			put("blur", blur)
@@ -2185,7 +2105,6 @@ public class ImageApi(
 		tag = request.tag,
 		cropWhitespace = request.cropWhitespace,
 		format = request.format,
-		addPlayedIndicator = request.addPlayedIndicator,
 		percentPlayed = request.percentPlayed,
 		unplayedCount = request.unplayedCount,
 		blur = request.blur,
@@ -2212,7 +2131,6 @@ public class ImageApi(
 	 * @param cropWhitespace Optional. Specify if whitespace should be cropped out of the image.
 	 * True/False. If unspecified, whitespace will be cropped from logos and clear art.
 	 * @param format Optional. The MediaBrowser.Model.Drawing.ImageFormat of the returned image.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param percentPlayed Optional. Percent to render for the percent played overlay.
 	 * @param unplayedCount Optional. Unplayed count overlay to render.
 	 * @param blur Optional. Blur image.
@@ -2234,7 +2152,6 @@ public class ImageApi(
 		tag: String? = null,
 		cropWhitespace: Boolean? = null,
 		format: ImageFormat? = null,
-		addPlayedIndicator: Boolean? = null,
 		percentPlayed: Double? = null,
 		unplayedCount: Int? = null,
 		blur: Int? = null,
@@ -2246,7 +2163,7 @@ public class ImageApi(
 			put("itemId", itemId)
 			put("imageType", imageType)
 		}
-		val queryParameters = buildMap<String, Any?>(17) {
+		val queryParameters = buildMap<String, Any?>(16) {
 			put("maxWidth", maxWidth)
 			put("maxHeight", maxHeight)
 			put("width", width)
@@ -2257,7 +2174,6 @@ public class ImageApi(
 			put("tag", tag)
 			put("cropWhitespace", cropWhitespace)
 			put("format", format)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("percentPlayed", percentPlayed)
 			put("unplayedCount", unplayedCount)
 			put("blur", blur)
@@ -2302,7 +2218,6 @@ public class ImageApi(
 	 * cases.
 	 * @param fillWidth Width of box to fill.
 	 * @param fillHeight Height of box to fill.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -2322,7 +2237,6 @@ public class ImageApi(
 		quality: Int? = null,
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -2332,7 +2246,7 @@ public class ImageApi(
 			put("name", name)
 			put("imageType", imageType)
 		}
-		val queryParameters = buildMap<String, Any?>(16) {
+		val queryParameters = buildMap<String, Any?>(15) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -2344,7 +2258,6 @@ public class ImageApi(
 			put("quality", quality)
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -2376,7 +2289,6 @@ public class ImageApi(
 		quality = request.quality,
 		fillWidth = request.fillWidth,
 		fillHeight = request.fillHeight,
-		addPlayedIndicator = request.addPlayedIndicator,
 		blur = request.blur,
 		backgroundColor = request.backgroundColor,
 		foregroundLayer = request.foregroundLayer,
@@ -2401,7 +2313,6 @@ public class ImageApi(
 	 * cases.
 	 * @param fillWidth Width of box to fill.
 	 * @param fillHeight Height of box to fill.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -2421,7 +2332,6 @@ public class ImageApi(
 		quality: Int? = null,
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -2431,7 +2341,7 @@ public class ImageApi(
 			put("name", name)
 			put("imageType", imageType)
 		}
-		val queryParameters = buildMap<String, Any?>(16) {
+		val queryParameters = buildMap<String, Any?>(15) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -2443,7 +2353,6 @@ public class ImageApi(
 			put("quality", quality)
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -2471,7 +2380,6 @@ public class ImageApi(
 	 * cases.
 	 * @param fillWidth Width of box to fill.
 	 * @param fillHeight Height of box to fill.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -2491,7 +2399,6 @@ public class ImageApi(
 		quality: Int? = null,
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -2501,7 +2408,7 @@ public class ImageApi(
 			put("imageType", imageType)
 			put("imageIndex", imageIndex)
 		}
-		val queryParameters = buildMap<String, Any?>(15) {
+		val queryParameters = buildMap<String, Any?>(14) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -2513,7 +2420,6 @@ public class ImageApi(
 			put("quality", quality)
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -2545,7 +2451,6 @@ public class ImageApi(
 		quality = request.quality,
 		fillWidth = request.fillWidth,
 		fillHeight = request.fillHeight,
-		addPlayedIndicator = request.addPlayedIndicator,
 		blur = request.blur,
 		backgroundColor = request.backgroundColor,
 		foregroundLayer = request.foregroundLayer,
@@ -2570,7 +2475,6 @@ public class ImageApi(
 	 * cases.
 	 * @param fillWidth Width of box to fill.
 	 * @param fillHeight Height of box to fill.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -2590,7 +2494,6 @@ public class ImageApi(
 		quality: Int? = null,
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -2600,7 +2503,7 @@ public class ImageApi(
 			put("imageType", imageType)
 			put("imageIndex", imageIndex)
 		}
-		val queryParameters = buildMap<String, Any?>(15) {
+		val queryParameters = buildMap<String, Any?>(14) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -2612,7 +2515,6 @@ public class ImageApi(
 			put("quality", quality)
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -2642,7 +2544,6 @@ public class ImageApi(
 	 * @param fillHeight Height of box to fill.
 	 * @param cropWhitespace Optional. Specify if whitespace should be cropped out of the image.
 	 * True/False. If unspecified, whitespace will be cropped from logos and clear art.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -2664,7 +2565,6 @@ public class ImageApi(
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
 		cropWhitespace: Boolean? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -2674,7 +2574,7 @@ public class ImageApi(
 			put("imageType", imageType)
 			put("imageIndex", imageIndex)
 		}
-		val queryParameters = buildMap<String, Any?>(16) {
+		val queryParameters = buildMap<String, Any?>(15) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -2687,7 +2587,6 @@ public class ImageApi(
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
 			put("cropWhitespace", cropWhitespace)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -2722,7 +2621,6 @@ public class ImageApi(
 		fillWidth = request.fillWidth,
 		fillHeight = request.fillHeight,
 		cropWhitespace = request.cropWhitespace,
-		addPlayedIndicator = request.addPlayedIndicator,
 		blur = request.blur,
 		backgroundColor = request.backgroundColor,
 		foregroundLayer = request.foregroundLayer,
@@ -2749,7 +2647,6 @@ public class ImageApi(
 	 * @param fillHeight Height of box to fill.
 	 * @param cropWhitespace Optional. Specify if whitespace should be cropped out of the image.
 	 * True/False. If unspecified, whitespace will be cropped from logos and clear art.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -2771,7 +2668,6 @@ public class ImageApi(
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
 		cropWhitespace: Boolean? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -2781,7 +2677,7 @@ public class ImageApi(
 			put("imageType", imageType)
 			put("imageIndex", imageIndex)
 		}
-		val queryParameters = buildMap<String, Any?>(16) {
+		val queryParameters = buildMap<String, Any?>(15) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -2794,7 +2690,6 @@ public class ImageApi(
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
 			put("cropWhitespace", cropWhitespace)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -2823,7 +2718,6 @@ public class ImageApi(
 	 * @param fillHeight Height of box to fill.
 	 * @param cropWhitespace Optional. Specify if whitespace should be cropped out of the image.
 	 * True/False. If unspecified, whitespace will be cropped from logos and clear art.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -2845,7 +2739,6 @@ public class ImageApi(
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
 		cropWhitespace: Boolean? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -2855,7 +2748,7 @@ public class ImageApi(
 			put("name", name)
 			put("imageType", imageType)
 		}
-		val queryParameters = buildMap<String, Any?>(17) {
+		val queryParameters = buildMap<String, Any?>(16) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -2868,7 +2761,6 @@ public class ImageApi(
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
 			put("cropWhitespace", cropWhitespace)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -2902,7 +2794,6 @@ public class ImageApi(
 		fillWidth = request.fillWidth,
 		fillHeight = request.fillHeight,
 		cropWhitespace = request.cropWhitespace,
-		addPlayedIndicator = request.addPlayedIndicator,
 		blur = request.blur,
 		backgroundColor = request.backgroundColor,
 		foregroundLayer = request.foregroundLayer,
@@ -2929,7 +2820,6 @@ public class ImageApi(
 	 * @param fillHeight Height of box to fill.
 	 * @param cropWhitespace Optional. Specify if whitespace should be cropped out of the image.
 	 * True/False. If unspecified, whitespace will be cropped from logos and clear art.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -2951,7 +2841,6 @@ public class ImageApi(
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
 		cropWhitespace: Boolean? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -2961,7 +2850,7 @@ public class ImageApi(
 			put("name", name)
 			put("imageType", imageType)
 		}
-		val queryParameters = buildMap<String, Any?>(17) {
+		val queryParameters = buildMap<String, Any?>(16) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -2974,7 +2863,6 @@ public class ImageApi(
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
 			put("cropWhitespace", cropWhitespace)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -3001,7 +2889,6 @@ public class ImageApi(
 	 * cases.
 	 * @param fillWidth Width of box to fill.
 	 * @param fillHeight Height of box to fill.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -3021,7 +2908,6 @@ public class ImageApi(
 		quality: Int? = null,
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -3031,7 +2917,7 @@ public class ImageApi(
 			put("name", name)
 			put("imageType", imageType)
 		}
-		val queryParameters = buildMap<String, Any?>(16) {
+		val queryParameters = buildMap<String, Any?>(15) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -3043,7 +2929,6 @@ public class ImageApi(
 			put("quality", quality)
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -3075,7 +2960,6 @@ public class ImageApi(
 		quality = request.quality,
 		fillWidth = request.fillWidth,
 		fillHeight = request.fillHeight,
-		addPlayedIndicator = request.addPlayedIndicator,
 		blur = request.blur,
 		backgroundColor = request.backgroundColor,
 		foregroundLayer = request.foregroundLayer,
@@ -3100,7 +2984,6 @@ public class ImageApi(
 	 * cases.
 	 * @param fillWidth Width of box to fill.
 	 * @param fillHeight Height of box to fill.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -3120,7 +3003,6 @@ public class ImageApi(
 		quality: Int? = null,
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -3130,7 +3012,7 @@ public class ImageApi(
 			put("name", name)
 			put("imageType", imageType)
 		}
-		val queryParameters = buildMap<String, Any?>(16) {
+		val queryParameters = buildMap<String, Any?>(15) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -3142,7 +3024,6 @@ public class ImageApi(
 			put("quality", quality)
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -3170,7 +3051,6 @@ public class ImageApi(
 	 * cases.
 	 * @param fillWidth Width of box to fill.
 	 * @param fillHeight Height of box to fill.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -3190,7 +3070,6 @@ public class ImageApi(
 		quality: Int? = null,
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -3200,7 +3079,7 @@ public class ImageApi(
 			put("imageType", imageType)
 			put("imageIndex", imageIndex)
 		}
-		val queryParameters = buildMap<String, Any?>(15) {
+		val queryParameters = buildMap<String, Any?>(14) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -3212,7 +3091,6 @@ public class ImageApi(
 			put("quality", quality)
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -3244,7 +3122,6 @@ public class ImageApi(
 		quality = request.quality,
 		fillWidth = request.fillWidth,
 		fillHeight = request.fillHeight,
-		addPlayedIndicator = request.addPlayedIndicator,
 		blur = request.blur,
 		backgroundColor = request.backgroundColor,
 		foregroundLayer = request.foregroundLayer,
@@ -3269,7 +3146,6 @@ public class ImageApi(
 	 * cases.
 	 * @param fillWidth Width of box to fill.
 	 * @param fillHeight Height of box to fill.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -3289,7 +3165,6 @@ public class ImageApi(
 		quality: Int? = null,
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -3299,7 +3174,7 @@ public class ImageApi(
 			put("imageType", imageType)
 			put("imageIndex", imageIndex)
 		}
-		val queryParameters = buildMap<String, Any?>(15) {
+		val queryParameters = buildMap<String, Any?>(14) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -3311,7 +3186,6 @@ public class ImageApi(
 			put("quality", quality)
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -3341,7 +3215,6 @@ public class ImageApi(
 	 * @param fillHeight Height of box to fill.
 	 * @param cropWhitespace Optional. Specify if whitespace should be cropped out of the image.
 	 * True/False. If unspecified, whitespace will be cropped from logos and clear art.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -3363,7 +3236,6 @@ public class ImageApi(
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
 		cropWhitespace: Boolean? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -3373,7 +3245,7 @@ public class ImageApi(
 			put("imageType", imageType)
 			put("imageIndex", imageIndex)
 		}
-		val queryParameters = buildMap<String, Any?>(16) {
+		val queryParameters = buildMap<String, Any?>(15) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -3386,7 +3258,6 @@ public class ImageApi(
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
 			put("cropWhitespace", cropWhitespace)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -3421,7 +3292,6 @@ public class ImageApi(
 		fillWidth = request.fillWidth,
 		fillHeight = request.fillHeight,
 		cropWhitespace = request.cropWhitespace,
-		addPlayedIndicator = request.addPlayedIndicator,
 		blur = request.blur,
 		backgroundColor = request.backgroundColor,
 		foregroundLayer = request.foregroundLayer,
@@ -3448,7 +3318,6 @@ public class ImageApi(
 	 * @param fillHeight Height of box to fill.
 	 * @param cropWhitespace Optional. Specify if whitespace should be cropped out of the image.
 	 * True/False. If unspecified, whitespace will be cropped from logos and clear art.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -3470,7 +3339,6 @@ public class ImageApi(
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
 		cropWhitespace: Boolean? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -3480,7 +3348,7 @@ public class ImageApi(
 			put("imageType", imageType)
 			put("imageIndex", imageIndex)
 		}
-		val queryParameters = buildMap<String, Any?>(16) {
+		val queryParameters = buildMap<String, Any?>(15) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -3493,7 +3361,6 @@ public class ImageApi(
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
 			put("cropWhitespace", cropWhitespace)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -3522,7 +3389,6 @@ public class ImageApi(
 	 * @param fillHeight Height of box to fill.
 	 * @param cropWhitespace Optional. Specify if whitespace should be cropped out of the image.
 	 * True/False. If unspecified, whitespace will be cropped from logos and clear art.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -3544,7 +3410,6 @@ public class ImageApi(
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
 		cropWhitespace: Boolean? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -3554,7 +3419,7 @@ public class ImageApi(
 			put("name", name)
 			put("imageType", imageType)
 		}
-		val queryParameters = buildMap<String, Any?>(17) {
+		val queryParameters = buildMap<String, Any?>(16) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -3567,7 +3432,6 @@ public class ImageApi(
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
 			put("cropWhitespace", cropWhitespace)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -3601,7 +3465,6 @@ public class ImageApi(
 		fillWidth = request.fillWidth,
 		fillHeight = request.fillHeight,
 		cropWhitespace = request.cropWhitespace,
-		addPlayedIndicator = request.addPlayedIndicator,
 		blur = request.blur,
 		backgroundColor = request.backgroundColor,
 		foregroundLayer = request.foregroundLayer,
@@ -3628,7 +3491,6 @@ public class ImageApi(
 	 * @param fillHeight Height of box to fill.
 	 * @param cropWhitespace Optional. Specify if whitespace should be cropped out of the image.
 	 * True/False. If unspecified, whitespace will be cropped from logos and clear art.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -3650,7 +3512,6 @@ public class ImageApi(
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
 		cropWhitespace: Boolean? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -3660,7 +3521,7 @@ public class ImageApi(
 			put("name", name)
 			put("imageType", imageType)
 		}
-		val queryParameters = buildMap<String, Any?>(17) {
+		val queryParameters = buildMap<String, Any?>(16) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -3673,7 +3534,6 @@ public class ImageApi(
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
 			put("cropWhitespace", cropWhitespace)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -3822,7 +3682,6 @@ public class ImageApi(
 	 * cases.
 	 * @param fillWidth Width of box to fill.
 	 * @param fillHeight Height of box to fill.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -3842,7 +3701,6 @@ public class ImageApi(
 		quality: Int? = null,
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -3852,7 +3710,7 @@ public class ImageApi(
 			put("name", name)
 			put("imageType", imageType)
 		}
-		val queryParameters = buildMap<String, Any?>(16) {
+		val queryParameters = buildMap<String, Any?>(15) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -3864,7 +3722,6 @@ public class ImageApi(
 			put("quality", quality)
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -3896,7 +3753,6 @@ public class ImageApi(
 		quality = request.quality,
 		fillWidth = request.fillWidth,
 		fillHeight = request.fillHeight,
-		addPlayedIndicator = request.addPlayedIndicator,
 		blur = request.blur,
 		backgroundColor = request.backgroundColor,
 		foregroundLayer = request.foregroundLayer,
@@ -3921,7 +3777,6 @@ public class ImageApi(
 	 * cases.
 	 * @param fillWidth Width of box to fill.
 	 * @param fillHeight Height of box to fill.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -3941,7 +3796,6 @@ public class ImageApi(
 		quality: Int? = null,
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -3951,7 +3805,7 @@ public class ImageApi(
 			put("name", name)
 			put("imageType", imageType)
 		}
-		val queryParameters = buildMap<String, Any?>(16) {
+		val queryParameters = buildMap<String, Any?>(15) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -3963,7 +3817,6 @@ public class ImageApi(
 			put("quality", quality)
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -3991,7 +3844,6 @@ public class ImageApi(
 	 * cases.
 	 * @param fillWidth Width of box to fill.
 	 * @param fillHeight Height of box to fill.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -4011,7 +3863,6 @@ public class ImageApi(
 		quality: Int? = null,
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -4021,7 +3872,7 @@ public class ImageApi(
 			put("imageType", imageType)
 			put("imageIndex", imageIndex)
 		}
-		val queryParameters = buildMap<String, Any?>(15) {
+		val queryParameters = buildMap<String, Any?>(14) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -4033,7 +3884,6 @@ public class ImageApi(
 			put("quality", quality)
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -4065,7 +3915,6 @@ public class ImageApi(
 		quality = request.quality,
 		fillWidth = request.fillWidth,
 		fillHeight = request.fillHeight,
-		addPlayedIndicator = request.addPlayedIndicator,
 		blur = request.blur,
 		backgroundColor = request.backgroundColor,
 		foregroundLayer = request.foregroundLayer,
@@ -4090,7 +3939,6 @@ public class ImageApi(
 	 * cases.
 	 * @param fillWidth Width of box to fill.
 	 * @param fillHeight Height of box to fill.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -4110,7 +3958,6 @@ public class ImageApi(
 		quality: Int? = null,
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -4120,7 +3967,7 @@ public class ImageApi(
 			put("imageType", imageType)
 			put("imageIndex", imageIndex)
 		}
-		val queryParameters = buildMap<String, Any?>(15) {
+		val queryParameters = buildMap<String, Any?>(14) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -4132,7 +3979,6 @@ public class ImageApi(
 			put("quality", quality)
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -4162,7 +4008,6 @@ public class ImageApi(
 	 * @param fillHeight Height of box to fill.
 	 * @param cropWhitespace Optional. Specify if whitespace should be cropped out of the image.
 	 * True/False. If unspecified, whitespace will be cropped from logos and clear art.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -4184,7 +4029,6 @@ public class ImageApi(
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
 		cropWhitespace: Boolean? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -4194,7 +4038,7 @@ public class ImageApi(
 			put("imageType", imageType)
 			put("imageIndex", imageIndex)
 		}
-		val queryParameters = buildMap<String, Any?>(16) {
+		val queryParameters = buildMap<String, Any?>(15) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -4207,7 +4051,6 @@ public class ImageApi(
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
 			put("cropWhitespace", cropWhitespace)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -4242,7 +4085,6 @@ public class ImageApi(
 		fillWidth = request.fillWidth,
 		fillHeight = request.fillHeight,
 		cropWhitespace = request.cropWhitespace,
-		addPlayedIndicator = request.addPlayedIndicator,
 		blur = request.blur,
 		backgroundColor = request.backgroundColor,
 		foregroundLayer = request.foregroundLayer,
@@ -4269,7 +4111,6 @@ public class ImageApi(
 	 * @param fillHeight Height of box to fill.
 	 * @param cropWhitespace Optional. Specify if whitespace should be cropped out of the image.
 	 * True/False. If unspecified, whitespace will be cropped from logos and clear art.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -4291,7 +4132,6 @@ public class ImageApi(
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
 		cropWhitespace: Boolean? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -4301,7 +4141,7 @@ public class ImageApi(
 			put("imageType", imageType)
 			put("imageIndex", imageIndex)
 		}
-		val queryParameters = buildMap<String, Any?>(16) {
+		val queryParameters = buildMap<String, Any?>(15) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -4314,7 +4154,6 @@ public class ImageApi(
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
 			put("cropWhitespace", cropWhitespace)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -4343,7 +4182,6 @@ public class ImageApi(
 	 * @param fillHeight Height of box to fill.
 	 * @param cropWhitespace Optional. Specify if whitespace should be cropped out of the image.
 	 * True/False. If unspecified, whitespace will be cropped from logos and clear art.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -4365,7 +4203,6 @@ public class ImageApi(
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
 		cropWhitespace: Boolean? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -4375,7 +4212,7 @@ public class ImageApi(
 			put("name", name)
 			put("imageType", imageType)
 		}
-		val queryParameters = buildMap<String, Any?>(17) {
+		val queryParameters = buildMap<String, Any?>(16) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -4388,7 +4225,6 @@ public class ImageApi(
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
 			put("cropWhitespace", cropWhitespace)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -4422,7 +4258,6 @@ public class ImageApi(
 		fillWidth = request.fillWidth,
 		fillHeight = request.fillHeight,
 		cropWhitespace = request.cropWhitespace,
-		addPlayedIndicator = request.addPlayedIndicator,
 		blur = request.blur,
 		backgroundColor = request.backgroundColor,
 		foregroundLayer = request.foregroundLayer,
@@ -4449,7 +4284,6 @@ public class ImageApi(
 	 * @param fillHeight Height of box to fill.
 	 * @param cropWhitespace Optional. Specify if whitespace should be cropped out of the image.
 	 * True/False. If unspecified, whitespace will be cropped from logos and clear art.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -4471,7 +4305,6 @@ public class ImageApi(
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
 		cropWhitespace: Boolean? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -4481,7 +4314,7 @@ public class ImageApi(
 			put("name", name)
 			put("imageType", imageType)
 		}
-		val queryParameters = buildMap<String, Any?>(17) {
+		val queryParameters = buildMap<String, Any?>(16) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -4494,7 +4327,6 @@ public class ImageApi(
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
 			put("cropWhitespace", cropWhitespace)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -4521,7 +4353,6 @@ public class ImageApi(
 	 * cases.
 	 * @param fillWidth Width of box to fill.
 	 * @param fillHeight Height of box to fill.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -4541,7 +4372,6 @@ public class ImageApi(
 		quality: Int? = null,
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -4551,7 +4381,7 @@ public class ImageApi(
 			put("userId", userId)
 			put("imageType", imageType)
 		}
-		val queryParameters = buildMap<String, Any?>(16) {
+		val queryParameters = buildMap<String, Any?>(15) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -4563,7 +4393,6 @@ public class ImageApi(
 			put("quality", quality)
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -4595,7 +4424,6 @@ public class ImageApi(
 		quality = request.quality,
 		fillWidth = request.fillWidth,
 		fillHeight = request.fillHeight,
-		addPlayedIndicator = request.addPlayedIndicator,
 		blur = request.blur,
 		backgroundColor = request.backgroundColor,
 		foregroundLayer = request.foregroundLayer,
@@ -4620,7 +4448,6 @@ public class ImageApi(
 	 * cases.
 	 * @param fillWidth Width of box to fill.
 	 * @param fillHeight Height of box to fill.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -4640,7 +4467,6 @@ public class ImageApi(
 		quality: Int? = null,
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -4650,7 +4476,7 @@ public class ImageApi(
 			put("userId", userId)
 			put("imageType", imageType)
 		}
-		val queryParameters = buildMap<String, Any?>(16) {
+		val queryParameters = buildMap<String, Any?>(15) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -4662,7 +4488,6 @@ public class ImageApi(
 			put("quality", quality)
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -4690,7 +4515,6 @@ public class ImageApi(
 	 * cases.
 	 * @param fillWidth Width of box to fill.
 	 * @param fillHeight Height of box to fill.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -4710,7 +4534,6 @@ public class ImageApi(
 		quality: Int? = null,
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -4720,7 +4543,7 @@ public class ImageApi(
 			put("imageType", imageType)
 			put("imageIndex", imageIndex)
 		}
-		val queryParameters = buildMap<String, Any?>(15) {
+		val queryParameters = buildMap<String, Any?>(14) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -4732,7 +4555,6 @@ public class ImageApi(
 			put("quality", quality)
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -4764,7 +4586,6 @@ public class ImageApi(
 		quality = request.quality,
 		fillWidth = request.fillWidth,
 		fillHeight = request.fillHeight,
-		addPlayedIndicator = request.addPlayedIndicator,
 		blur = request.blur,
 		backgroundColor = request.backgroundColor,
 		foregroundLayer = request.foregroundLayer,
@@ -4789,7 +4610,6 @@ public class ImageApi(
 	 * cases.
 	 * @param fillWidth Width of box to fill.
 	 * @param fillHeight Height of box to fill.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -4809,7 +4629,6 @@ public class ImageApi(
 		quality: Int? = null,
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -4819,7 +4638,7 @@ public class ImageApi(
 			put("imageType", imageType)
 			put("imageIndex", imageIndex)
 		}
-		val queryParameters = buildMap<String, Any?>(15) {
+		val queryParameters = buildMap<String, Any?>(14) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -4831,7 +4650,6 @@ public class ImageApi(
 			put("quality", quality)
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -4861,7 +4679,6 @@ public class ImageApi(
 	 * @param fillHeight Height of box to fill.
 	 * @param cropWhitespace Optional. Specify if whitespace should be cropped out of the image.
 	 * True/False. If unspecified, whitespace will be cropped from logos and clear art.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -4883,7 +4700,6 @@ public class ImageApi(
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
 		cropWhitespace: Boolean? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -4893,7 +4709,7 @@ public class ImageApi(
 			put("imageType", imageType)
 			put("imageIndex", imageIndex)
 		}
-		val queryParameters = buildMap<String, Any?>(16) {
+		val queryParameters = buildMap<String, Any?>(15) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -4906,7 +4722,6 @@ public class ImageApi(
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
 			put("cropWhitespace", cropWhitespace)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -4940,7 +4755,6 @@ public class ImageApi(
 		fillWidth = request.fillWidth,
 		fillHeight = request.fillHeight,
 		cropWhitespace = request.cropWhitespace,
-		addPlayedIndicator = request.addPlayedIndicator,
 		blur = request.blur,
 		backgroundColor = request.backgroundColor,
 		foregroundLayer = request.foregroundLayer,
@@ -4967,7 +4781,6 @@ public class ImageApi(
 	 * @param fillHeight Height of box to fill.
 	 * @param cropWhitespace Optional. Specify if whitespace should be cropped out of the image.
 	 * True/False. If unspecified, whitespace will be cropped from logos and clear art.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -4989,7 +4802,6 @@ public class ImageApi(
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
 		cropWhitespace: Boolean? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -4999,7 +4811,7 @@ public class ImageApi(
 			put("imageType", imageType)
 			put("imageIndex", imageIndex)
 		}
-		val queryParameters = buildMap<String, Any?>(16) {
+		val queryParameters = buildMap<String, Any?>(15) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -5012,7 +4824,6 @@ public class ImageApi(
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
 			put("cropWhitespace", cropWhitespace)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -5041,7 +4852,6 @@ public class ImageApi(
 	 * @param fillHeight Height of box to fill.
 	 * @param cropWhitespace Optional. Specify if whitespace should be cropped out of the image.
 	 * True/False. If unspecified, whitespace will be cropped from logos and clear art.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -5063,7 +4873,6 @@ public class ImageApi(
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
 		cropWhitespace: Boolean? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -5073,7 +4882,7 @@ public class ImageApi(
 			put("userId", userId)
 			put("imageType", imageType)
 		}
-		val queryParameters = buildMap<String, Any?>(17) {
+		val queryParameters = buildMap<String, Any?>(16) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -5086,7 +4895,6 @@ public class ImageApi(
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
 			put("cropWhitespace", cropWhitespace)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)
@@ -5120,7 +4928,6 @@ public class ImageApi(
 		fillWidth = request.fillWidth,
 		fillHeight = request.fillHeight,
 		cropWhitespace = request.cropWhitespace,
-		addPlayedIndicator = request.addPlayedIndicator,
 		blur = request.blur,
 		backgroundColor = request.backgroundColor,
 		foregroundLayer = request.foregroundLayer,
@@ -5147,7 +4954,6 @@ public class ImageApi(
 	 * @param fillHeight Height of box to fill.
 	 * @param cropWhitespace Optional. Specify if whitespace should be cropped out of the image.
 	 * True/False. If unspecified, whitespace will be cropped from logos and clear art.
-	 * @param addPlayedIndicator Optional. Add a played indicator.
 	 * @param blur Optional. Blur image.
 	 * @param backgroundColor Optional. Apply a background color for transparent images.
 	 * @param foregroundLayer Optional. Apply a foreground layer on top of the image.
@@ -5169,7 +4975,6 @@ public class ImageApi(
 		fillWidth: Int? = null,
 		fillHeight: Int? = null,
 		cropWhitespace: Boolean? = null,
-		addPlayedIndicator: Boolean? = null,
 		blur: Int? = null,
 		backgroundColor: String? = null,
 		foregroundLayer: String? = null,
@@ -5179,7 +4984,7 @@ public class ImageApi(
 			put("userId", userId)
 			put("imageType", imageType)
 		}
-		val queryParameters = buildMap<String, Any?>(17) {
+		val queryParameters = buildMap<String, Any?>(16) {
 			put("tag", tag)
 			put("format", format)
 			put("maxWidth", maxWidth)
@@ -5192,7 +4997,6 @@ public class ImageApi(
 			put("fillWidth", fillWidth)
 			put("fillHeight", fillHeight)
 			put("cropWhitespace", cropWhitespace)
-			put("addPlayedIndicator", addPlayedIndicator)
 			put("blur", blur)
 			put("backgroundColor", backgroundColor)
 			put("foregroundLayer", foregroundLayer)

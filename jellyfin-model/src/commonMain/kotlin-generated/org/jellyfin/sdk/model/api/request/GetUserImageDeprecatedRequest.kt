@@ -98,11 +98,6 @@ public data class GetUserImageDeprecatedRequest(
 	@SerialName("cropWhitespace")
 	public val cropWhitespace: Boolean? = null,
 	/**
-	 * Optional. Add a played indicator.
-	 */
-	@SerialName("addPlayedIndicator")
-	public val addPlayedIndicator: Boolean? = null,
-	/**
 	 * Optional. Blur image.
 	 */
 	@SerialName("blur")

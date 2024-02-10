@@ -19,10 +19,18 @@ public data class LibraryOptions(
 	public val enablePhotos: Boolean,
 	@SerialName("EnableRealtimeMonitor")
 	public val enableRealtimeMonitor: Boolean,
+	@SerialName("EnableLUFSScan")
+	public val enableLufsScan: Boolean,
+	@SerialName("UseReplayGainTags")
+	public val useReplayGainTags: Boolean,
 	@SerialName("EnableChapterImageExtraction")
 	public val enableChapterImageExtraction: Boolean,
 	@SerialName("ExtractChapterImagesDuringLibraryScan")
 	public val extractChapterImagesDuringLibraryScan: Boolean,
+	@SerialName("EnableTrickplayImageExtraction")
+	public val enableTrickplayImageExtraction: Boolean,
+	@SerialName("ExtractTrickplayImagesDuringLibraryScan")
+	public val extractTrickplayImagesDuringLibraryScan: Boolean,
 	@SerialName("PathInfos")
 	public val pathInfos: List<MediaPathInfo>,
 	@SerialName("SaveLocalMetadata")
@@ -34,6 +42,8 @@ public data class LibraryOptions(
 	public val enableAutomaticSeriesGrouping: Boolean,
 	@SerialName("EnableEmbeddedTitles")
 	public val enableEmbeddedTitles: Boolean,
+	@SerialName("EnableEmbeddedExtrasTitles")
+	public val enableEmbeddedExtrasTitles: Boolean,
 	@SerialName("EnableEmbeddedEpisodeInfos")
 	public val enableEmbeddedEpisodeInfos: Boolean,
 	@SerialName("AutomaticRefreshIntervalDays")

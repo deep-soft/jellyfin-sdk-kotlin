@@ -93,11 +93,6 @@ public data class GetItemImageByIndexDeprecatedRequest(
 	@SerialName("format")
 	public val format: ImageFormat? = null,
 	/**
-	 * Optional. Add a played indicator.
-	 */
-	@SerialName("addPlayedIndicator")
-	public val addPlayedIndicator: Boolean? = null,
-	/**
 	 * Optional. Percent to render for the percent played overlay.
 	 */
 	@SerialName("percentPlayed")

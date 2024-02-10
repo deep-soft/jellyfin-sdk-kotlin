@@ -26,6 +26,7 @@ import org.jellyfin.sdk.model.api.BaseItemDtoQueryResult
 import org.jellyfin.sdk.model.api.BaseItemKind
 import org.jellyfin.sdk.model.api.ImageType
 import org.jellyfin.sdk.model.api.ItemFields
+import org.jellyfin.sdk.model.api.LyricResponse
 import org.jellyfin.sdk.model.api.UserItemDataDto
 import org.jellyfin.sdk.model.api.request.GetLatestMediaRequest
 
@@ -176,6 +177,25 @@ public class UserLibraryApi(
 		val data = null
 		val response = api.`get`<List<BaseItemDto>>("/Users/{userId}/Items/{itemId}/LocalTrailers",
 				pathParameters, queryParameters, data)
+		return response
+	}
+
+	/**
+	 * Gets an item's lyrics.
+	 *
+	 * @param userId User id.
+	 * @param itemId Item id.
+	 */
+	public suspend fun getLyrics(userId: UUID = api.userId ?: throw MissingUserIdException(),
+			itemId: UUID): Response<LyricResponse> {
+		val pathParameters = buildMap<String, Any?>(2) {
+			put("userId", userId)
+			put("itemId", itemId)
+		}
+		val queryParameters = emptyMap<String, Any?>()
+		val data = null
+		val response = api.`get`<LyricResponse>("/Users/{userId}/Items/{itemId}/Lyrics", pathParameters,
+				queryParameters, data)
 		return response
 	}
 

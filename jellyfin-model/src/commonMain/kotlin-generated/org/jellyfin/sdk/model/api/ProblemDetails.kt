@@ -12,14 +12,14 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 public data class ProblemDetails(
-	@SerialName("type")
+	@SerialName("Type")
 	public val type: String? = null,
-	@SerialName("title")
+	@SerialName("Title")
 	public val title: String? = null,
-	@SerialName("status")
+	@SerialName("Status")
 	public val status: Int? = null,
-	@SerialName("detail")
+	@SerialName("Detail")
 	public val detail: String? = null,
-	@SerialName("instance")
+	@SerialName("Instance")
 	public val instance: String? = null,
 )

@@ -18,6 +18,7 @@ import org.jellyfin.sdk.api.client.ApiClient
 import org.jellyfin.sdk.api.client.Response
 import org.jellyfin.sdk.api.client.exception.MissingUserIdException
 import org.jellyfin.sdk.api.client.extensions.`get`
+import org.jellyfin.sdk.api.client.extensions.post
 import org.jellyfin.sdk.model.DateTime
 import org.jellyfin.sdk.model.UUID
 import org.jellyfin.sdk.model.api.BaseItemDtoQueryResult
@@ -25,9 +26,13 @@ import org.jellyfin.sdk.model.api.BaseItemKind
 import org.jellyfin.sdk.model.api.ImageType
 import org.jellyfin.sdk.model.api.ItemFields
 import org.jellyfin.sdk.model.api.ItemFilter
+import org.jellyfin.sdk.model.api.ItemSortBy
 import org.jellyfin.sdk.model.api.LocationType
+import org.jellyfin.sdk.model.api.MediaType
 import org.jellyfin.sdk.model.api.SeriesStatus
 import org.jellyfin.sdk.model.api.SortOrder
+import org.jellyfin.sdk.model.api.UpdateUserItemDataDto
+import org.jellyfin.sdk.model.api.UserItemDataDto
 import org.jellyfin.sdk.model.api.VideoType
 import org.jellyfin.sdk.model.api.request.GetItemsByUserIdRequest
 import org.jellyfin.sdk.model.api.request.GetItemsRequest
@@ -37,9 +42,29 @@ public class ItemsApi(
 	private val api: ApiClient,
 ) : Api {
 	/**
+	 * Get Item User Data.
+	 *
+	 * @param userId The user id.
+	 * @param itemId The item id.
+	 */
+	public suspend fun getItemUserData(userId: UUID = api.userId ?: throw MissingUserIdException(),
+			itemId: UUID): Response<UserItemDataDto> {
+		val pathParameters = buildMap<String, Any?>(2) {
+			put("userId", userId)
+			put("itemId", itemId)
+		}
+		val queryParameters = emptyMap<String, Any?>()
+		val data = null
+		val response = api.`get`<UserItemDataDto>("/Users/{userId}/Items/{itemId}/UserData",
+				pathParameters, queryParameters, data)
+		return response
+	}
+
+	/**
 	 * Gets items based on a query.
 	 *
-	 * @param userId The user id supplied as query parameter.
+	 * @param userId The user id supplied as query parameter; this is required when not using an API
+	 * key.
 	 * @param maxOfficialRating Optional filter by maximum official rating (PG, PG-13, TV-MA, etc).
 	 * @param hasThemeSong Optional filter by items with theme songs.
 	 * @param hasThemeVideo Optional filter by items with theme videos.
@@ -65,9 +90,9 @@ public class ItemsApi(
 	 * Format = ISO.
 	 * @param maxPremiereDate Optional. The maximum premiere date. Format = ISO.
 	 * @param hasOverview Optional filter by items that have an overview or not.
-	 * @param hasImdbId Optional filter by items that have an imdb id or not.
-	 * @param hasTmdbId Optional filter by items that have a tmdb id or not.
-	 * @param hasTvdbId Optional filter by items that have a tvdb id or not.
+	 * @param hasImdbId Optional filter by items that have an IMDb id or not.
+	 * @param hasTmdbId Optional filter by items that have a TMDb id or not.
+	 * @param hasTvdbId Optional filter by items that have a TVDb id or not.
 	 * @param isMovie Optional filter for live tv movies.
 	 * @param isSeries Optional filter for live tv series.
 	 * @param isNews Optional filter for live tv news.
@@ -81,7 +106,7 @@ public class ItemsApi(
 	 * @param recursive When searching within folders, this determines whether or not the search will
 	 * be recursive. true/false.
 	 * @param searchTerm Optional. Filter based on a search term.
-	 * @param sortOrder Sort Order - Ascending,Descending.
+	 * @param sortOrder Sort Order - Ascending, Descending.
 	 * @param parentId Specify this to localize the search to a specific item or folder. Omit to use
 	 * the root.
 	 * @param fields Optional. Specify additional fields of information to return in the output. This
@@ -173,7 +198,7 @@ public class ItemsApi(
 		hasSubtitles: Boolean? = null,
 		hasSpecialFeature: Boolean? = null,
 		hasTrailer: Boolean? = null,
-		adjacentTo: String? = null,
+		adjacentTo: UUID? = null,
 		parentIndexNumber: Int? = null,
 		hasParentalRating: Boolean? = null,
 		isHd: Boolean? = null,
@@ -209,9 +234,9 @@ public class ItemsApi(
 		includeItemTypes: Collection<BaseItemKind>? = emptyList(),
 		filters: Collection<ItemFilter>? = emptyList(),
 		isFavorite: Boolean? = null,
-		mediaTypes: Collection<String>? = emptyList(),
+		mediaTypes: Collection<MediaType>? = emptyList(),
 		imageTypes: Collection<ImageType>? = emptyList(),
-		sortBy: Collection<String>? = emptyList(),
+		sortBy: Collection<ItemSortBy>? = emptyList(),
 		isPlayed: Boolean? = null,
 		genres: Collection<String>? = emptyList(),
 		officialRatings: Collection<String>? = emptyList(),
@@ -468,9 +493,9 @@ public class ItemsApi(
 	 * Format = ISO.
 	 * @param maxPremiereDate Optional. The maximum premiere date. Format = ISO.
 	 * @param hasOverview Optional filter by items that have an overview or not.
-	 * @param hasImdbId Optional filter by items that have an imdb id or not.
-	 * @param hasTmdbId Optional filter by items that have a tmdb id or not.
-	 * @param hasTvdbId Optional filter by items that have a tvdb id or not.
+	 * @param hasImdbId Optional filter by items that have an IMDb id or not.
+	 * @param hasTmdbId Optional filter by items that have a TMDb id or not.
+	 * @param hasTvdbId Optional filter by items that have a TVDb id or not.
 	 * @param isMovie Optional filter for live tv movies.
 	 * @param isSeries Optional filter for live tv series.
 	 * @param isNews Optional filter for live tv news.
@@ -484,7 +509,7 @@ public class ItemsApi(
 	 * @param recursive When searching within folders, this determines whether or not the search will
 	 * be recursive. true/false.
 	 * @param searchTerm Optional. Filter based on a search term.
-	 * @param sortOrder Sort Order - Ascending,Descending.
+	 * @param sortOrder Sort Order - Ascending, Descending.
 	 * @param parentId Specify this to localize the search to a specific item or folder. Omit to use
 	 * the root.
 	 * @param fields Optional. Specify additional fields of information to return in the output. This
@@ -576,7 +601,7 @@ public class ItemsApi(
 		hasSubtitles: Boolean? = null,
 		hasSpecialFeature: Boolean? = null,
 		hasTrailer: Boolean? = null,
-		adjacentTo: String? = null,
+		adjacentTo: UUID? = null,
 		parentIndexNumber: Int? = null,
 		hasParentalRating: Boolean? = null,
 		isHd: Boolean? = null,
@@ -612,9 +637,9 @@ public class ItemsApi(
 		includeItemTypes: Collection<BaseItemKind>? = emptyList(),
 		filters: Collection<ItemFilter>? = emptyList(),
 		isFavorite: Boolean? = null,
-		mediaTypes: Collection<String>? = emptyList(),
+		mediaTypes: Collection<MediaType>? = emptyList(),
 		imageTypes: Collection<ImageType>? = emptyList(),
-		sortBy: Collection<String>? = emptyList(),
+		sortBy: Collection<ItemSortBy>? = emptyList(),
 		isPlayed: Boolean? = null,
 		genres: Collection<String>? = emptyList(),
 		officialRatings: Collection<String>? = emptyList(),
@@ -876,7 +901,7 @@ public class ItemsApi(
 		searchTerm: String? = null,
 		parentId: UUID? = null,
 		fields: Collection<ItemFields>? = emptyList(),
-		mediaTypes: Collection<String>? = emptyList(),
+		mediaTypes: Collection<MediaType>? = emptyList(),
 		enableUserData: Boolean? = null,
 		imageTypeLimit: Int? = null,
 		enableImageTypes: Collection<ImageType>? = emptyList(),
@@ -934,4 +959,25 @@ public class ItemsApi(
 		enableImages = request.enableImages,
 		excludeActiveSessions = request.excludeActiveSessions,
 	)
+
+	/**
+	 * Update Item User Data.
+	 *
+	 * @param userId The user id.
+	 * @param itemId The item id.
+	 */
+	public suspend fun updateItemUserData(
+		userId: UUID = api.userId ?: throw MissingUserIdException(),
+		itemId: UUID,
+		`data`: UpdateUserItemDataDto,
+	): Response<UserItemDataDto> {
+		val pathParameters = buildMap<String, Any?>(2) {
+			put("userId", userId)
+			put("itemId", itemId)
+		}
+		val queryParameters = emptyMap<String, Any?>()
+		val response = api.post<UserItemDataDto>("/Users/{userId}/Items/{itemId}/UserData",
+				pathParameters, queryParameters, data)
+		return response
+	}
 }

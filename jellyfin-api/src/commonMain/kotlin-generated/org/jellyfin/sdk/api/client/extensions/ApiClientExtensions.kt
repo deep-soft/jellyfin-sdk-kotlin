@@ -18,15 +18,12 @@ import org.jellyfin.sdk.api.operations.ConfigurationApi
 import org.jellyfin.sdk.api.operations.DashboardApi
 import org.jellyfin.sdk.api.operations.DevicesApi
 import org.jellyfin.sdk.api.operations.DisplayPreferencesApi
-import org.jellyfin.sdk.api.operations.DlnaApi
-import org.jellyfin.sdk.api.operations.DlnaServerApi
 import org.jellyfin.sdk.api.operations.DynamicHlsApi
 import org.jellyfin.sdk.api.operations.EnvironmentApi
 import org.jellyfin.sdk.api.operations.FilterApi
 import org.jellyfin.sdk.api.operations.GenresApi
 import org.jellyfin.sdk.api.operations.HlsSegmentApi
 import org.jellyfin.sdk.api.operations.ImageApi
-import org.jellyfin.sdk.api.operations.ImageByNameApi
 import org.jellyfin.sdk.api.operations.InstantMixApi
 import org.jellyfin.sdk.api.operations.ItemLookupApi
 import org.jellyfin.sdk.api.operations.ItemRefreshApi
@@ -39,7 +36,6 @@ import org.jellyfin.sdk.api.operations.LocalizationApi
 import org.jellyfin.sdk.api.operations.MediaInfoApi
 import org.jellyfin.sdk.api.operations.MoviesApi
 import org.jellyfin.sdk.api.operations.MusicGenresApi
-import org.jellyfin.sdk.api.operations.NotificationsApi
 import org.jellyfin.sdk.api.operations.PackageApi
 import org.jellyfin.sdk.api.operations.PersonsApi
 import org.jellyfin.sdk.api.operations.PlayStateApi
@@ -59,6 +55,7 @@ import org.jellyfin.sdk.api.operations.SystemApi
 import org.jellyfin.sdk.api.operations.TimeSyncApi
 import org.jellyfin.sdk.api.operations.TmdbApi
 import org.jellyfin.sdk.api.operations.TrailersApi
+import org.jellyfin.sdk.api.operations.TrickplayApi
 import org.jellyfin.sdk.api.operations.TvShowsApi
 import org.jellyfin.sdk.api.operations.UniversalAudioApi
 import org.jellyfin.sdk.api.operations.UserApi
@@ -104,12 +101,6 @@ public val ApiClient.devicesApi: DevicesApi
 public val ApiClient.displayPreferencesApi: DisplayPreferencesApi
 	get() = getOrCreateApi { DisplayPreferencesApi(it) }
 
-public val ApiClient.dlnaApi: DlnaApi
-	get() = getOrCreateApi { DlnaApi(it) }
-
-public val ApiClient.dlnaServerApi: DlnaServerApi
-	get() = getOrCreateApi { DlnaServerApi(it) }
-
 public val ApiClient.dynamicHlsApi: DynamicHlsApi
 	get() = getOrCreateApi { DynamicHlsApi(it) }
 
@@ -127,9 +118,6 @@ public val ApiClient.hlsSegmentApi: HlsSegmentApi
 
 public val ApiClient.imageApi: ImageApi
 	get() = getOrCreateApi { ImageApi(it) }
-
-public val ApiClient.imageByNameApi: ImageByNameApi
-	get() = getOrCreateApi { ImageByNameApi(it) }
 
 public val ApiClient.instantMixApi: InstantMixApi
 	get() = getOrCreateApi { InstantMixApi(it) }
@@ -166,9 +154,6 @@ public val ApiClient.moviesApi: MoviesApi
 
 public val ApiClient.musicGenresApi: MusicGenresApi
 	get() = getOrCreateApi { MusicGenresApi(it) }
-
-public val ApiClient.notificationsApi: NotificationsApi
-	get() = getOrCreateApi { NotificationsApi(it) }
 
 public val ApiClient.packageApi: PackageApi
 	get() = getOrCreateApi { PackageApi(it) }
@@ -226,6 +211,9 @@ public val ApiClient.tmdbApi: TmdbApi
 
 public val ApiClient.trailersApi: TrailersApi
 	get() = getOrCreateApi { TrailersApi(it) }
+
+public val ApiClient.trickplayApi: TrickplayApi
+	get() = getOrCreateApi { TrickplayApi(it) }
 
 public val ApiClient.tvShowsApi: TvShowsApi
 	get() = getOrCreateApi { TvShowsApi(it) }

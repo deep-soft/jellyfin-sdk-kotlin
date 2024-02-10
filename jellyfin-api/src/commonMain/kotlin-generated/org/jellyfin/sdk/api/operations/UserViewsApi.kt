@@ -19,6 +19,7 @@ import org.jellyfin.sdk.api.client.exception.MissingUserIdException
 import org.jellyfin.sdk.api.client.extensions.`get`
 import org.jellyfin.sdk.model.UUID
 import org.jellyfin.sdk.model.api.BaseItemDtoQueryResult
+import org.jellyfin.sdk.model.api.CollectionType
 import org.jellyfin.sdk.model.api.SpecialViewOptionDto
 
 public class UserViewsApi(
@@ -53,7 +54,7 @@ public class UserViewsApi(
 	public suspend fun getUserViews(
 		userId: UUID = api.userId ?: throw MissingUserIdException(),
 		includeExternalContent: Boolean? = null,
-		presetViews: Collection<String>? = emptyList(),
+		presetViews: Collection<CollectionType>? = emptyList(),
 		includeHidden: Boolean? = false,
 	): Response<BaseItemDtoQueryResult> {
 		val pathParameters = buildMap<String, Any?>(1) {

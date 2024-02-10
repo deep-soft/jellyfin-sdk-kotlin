@@ -121,7 +121,7 @@ public data class GetProgramsDto(
 	 * Optional.
 	 */
 	@SerialName("SortBy")
-	public val sortBy: List<String>,
+	public val sortBy: List<ItemSortBy>,
 	/**
 	 * Sort Order - Ascending,Descending.
 	 */
